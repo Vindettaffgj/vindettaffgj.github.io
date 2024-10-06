@@ -155,10 +155,10 @@ p {
     background-color: #8a2be2;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.4em;
+    padding: 15px 25px;
+    font-size: 1.6em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s;
     margin-top: 33px;
 }
