@@ -1,0 +1,214 @@
+@font-face {
+    font-family: Tektur;
+    src: url(fonts/TekturNarrow-ExtraBold.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: white;
+    font-family: Tektur;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./static/images/ba356810c6637d76fb4bace416bef714.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.animated-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.animated-background .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.strip {
+    flex: 1;
+    display: flex;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-origin: content-box;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+
+@keyframes moveRight {
+    0% { background-position: 0 0; }
+    100% { background-position: -1200px 0; }
+}
+
+@keyframes moveLeft {
+    0% { background-position: 0 0; }
+    100% { background-position: 1200px 0; }
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    padding: 10px 0 0;
+    color: #ff0eb5;
+}
+
+p {
+    font-size: 1.4em;
+    text-shadow: 1px 1px 1px #000;
+    margin: 10px 0;
+}
+
+.img_start {
+    width: 60%;
+    margin: 0 auto 20px;
+    padding: 5px 0 0;
+}
+
+.button-container {
+    margin: 12px 0;
+}
+
+.button-container button {
+    background-color: #8a2be2;
+    font-family: Tektur;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 5px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #6b1fa1;
+}
+
+.button-container button.selected {
+    background-color: #6b1fa1;
+}
+
+.grid-container {
+    position: absolute;
+    width: 0%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.grid-container p {
+    color: rgba(0, 0, 0, 0);
+}
+
+.grid-item {
+    width: 100%;
+    padding-bottom: 100%; /* 1:1 Aspect Ratio */
+    position: relative;
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    background-image: url('static/images/star_sprite.png');
+    background-size: cover;
+}
+
+.square1 {
+    background-image: url('static/images/square1.png');
+    background-size: cover;
+}
+
+.square2 {
+    background-image: url('static/images/square2.png');
+    background-size: cover;
+}
+
+.signal-button {
+    font-family: Tektur;
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.4em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 33px;
+}
+
+.signal-button:hover {
+    background-color: #6b1fa1;
+}
+
+
+.rainbow-text {
+          font-size: 3rem;
+          background: linear-gradient(90deg, #0fd9f5, #00ff27);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+      }
+
+
+.container2 {
+	--angle: 0deg;
+	border: 1px solid;
+	border-image: linear-gradient(var(--angle), #0e5e6a, #07a21f) 1;
+	animation: 6s rotate linear infinite;
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(9, 14, 28, 0.6);
+    overflow: hidden;
+    padding: 15px 0px 15px 0px;
+  transition: 320ms;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@media (width < 360px) {
+  .rainbow-text{
+    font-size: 38px;
+    transition: 320ms;
+    }
+    .container2{
+      margin: 6px 3px 0px 3px;
+      transition: 320ms;
+    }
+}
