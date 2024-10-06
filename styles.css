@@ -155,8 +155,8 @@ p {
     background-color: #8a2be2;
     color: white;
     border: none;
-    padding: 15px 25px;
-    font-size: 1.6em;
+    padding: 10px 20px;
+    font-size: 1.4em;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s;
