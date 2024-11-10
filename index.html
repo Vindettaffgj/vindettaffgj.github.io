@@ -719,12 +719,6 @@
                     <button onclick="openGame('brawlPirates')" data-key="open_game">Открыть</button>
                 </div>
             </div>
-            <div class="game">
-                <div class="game-info">
-                    <h3 data-key="lucky_jet_title">LuckyJet</h3>
-                    <button onclick="openGame('luckyJet')" data-key="open_game">Открыть</button>
-                </div>
-            </div>
         </div>
     </div>
     <div class="tab">
@@ -1221,8 +1215,6 @@ const modalTexts = {
                     return 'Brawl Pirates';
                 case '5':  // Добавляем Bombucks
                     return 'Bombucks';
-                case '6':  // Добавляем Bombucks
-                    return 'LuckyJet';
                 default:
                     return '';
             }
@@ -1323,11 +1315,6 @@ const modalTexts = {
                 royalMines: {
                     ios: `./royalmines/index.html`,
                     other: `./royalmines/index.html`
-                },
-
-                luckyJet: {
-                    ios: `./jet/index.html`,
-                    other: `./jet/index.html`
                 }
             };
 
